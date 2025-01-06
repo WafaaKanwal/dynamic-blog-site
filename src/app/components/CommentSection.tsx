@@ -20,6 +20,9 @@ export default function CommentSection({ postId }: { postId: number }) {
     }
   };
 
+  // Example usage of postId (optional for future functionality)
+  console.log('Post ID:', postId);
+
   return (
     <div className="mt-10">
       <h2 className="text-2xl font-bold mb-4 text-teal-400">Comments</h2>
