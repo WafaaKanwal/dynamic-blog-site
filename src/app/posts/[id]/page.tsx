@@ -17,14 +17,14 @@ export default function PostDetails({ params }: { params: { id: string } }) {
 
         {/* Image Section */}
         <div className="relative mb-8">
-        <Image
-    src={post.image}
-    alt={post.title}
-    layout="responsive"
-    width={1000} // Specify the image width
-    height={600} // Specify the image height
-    className="rounded-3xl shadow-lg transform hover:scale-105 transition duration-500 ease-in-out"
-  />
+          <Image
+            src={post.image}
+            alt={post.title}
+            layout="responsive"
+            width={1000} // Specify the image width
+            height={600} // Specify the image height
+            className="rounded-3xl shadow-lg transform hover:scale-105 transition duration-500 ease-in-out"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-30 rounded-3xl"></div>
         </div>
 
@@ -33,7 +33,8 @@ export default function PostDetails({ params }: { params: { id: string } }) {
 
         {/* Comments Section */}
         <div className="border-t-2 border-gray-600 pt-8">
-          <CommentSection postId={post.id} />
+          {/* Ensure post.id is passed as a number */}
+          <CommentSection postId={Number(post.id)} />
         </div>
       </div>
     </div>
