@@ -3,6 +3,7 @@ import CommentSection from '@/app/components/CommentSection';
 import Image from 'next/image';
 
 export default function PostDetails({ params }: { params: { id: string } }) {
+  // Ensure post.id is a number
   const post = posts.find((p) => p.id.toString() === params.id);
 
   if (!post) return <div className="text-center text-red-500">Post not found</div>;
